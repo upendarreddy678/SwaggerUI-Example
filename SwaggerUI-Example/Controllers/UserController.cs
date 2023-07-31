@@ -74,7 +74,7 @@ namespace SwaggerUI_Example.Controllers
         [Produces("Application/json")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserDto))]
-        public IActionResult GetRoleById([FromRoute] string Id)
+        public IActionResult GetUserById([FromRoute] string Id)
         {
             var Response = _dbContext.userDetails.Where(x => x.Id == Id).Select(y => new UserDto
             {
@@ -90,7 +90,7 @@ namespace SwaggerUI_Example.Controllers
         [HttpGet]
         [Produces("Application/json")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<UserDto>))]
-        public IActionResult GetRoles()
+        public IActionResult GetUsers()
         {
             var Response = _dbContext.userDetails.Select(y => new UserDto
             {
