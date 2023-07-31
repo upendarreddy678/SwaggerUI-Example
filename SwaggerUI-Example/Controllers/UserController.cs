@@ -76,7 +76,7 @@ namespace SwaggerUI_Example.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UserDto))]
         public IActionResult GetRoleById([FromRoute] string Id)
         {
-            var Response = _dbContext.userDetails.Select(y => new UserDto
+            var Response = _dbContext.userDetails.Where(x => x.Id == Id).Select(y => new UserDto
             {
                 Id = y.Id,
                 Name = y.Name
