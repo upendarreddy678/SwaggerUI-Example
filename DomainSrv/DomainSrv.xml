@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DomainSrv</name>
+    </assembly>
+    <members>
+        <member name="T:DomainSrv.User.CreateUpdateUserDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DomainSrv.User.CreateUpdateUserDto.Name">
+            <example>Upender</example>
+        </member>
+        <member name="P:DomainSrv.User.UserDto.Id">
+            <example>TestId</example>
+        </member>
+    </members>
+</doc>

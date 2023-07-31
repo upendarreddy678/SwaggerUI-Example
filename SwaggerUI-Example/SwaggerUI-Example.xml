@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SwaggerUI-Example</name>
+    </assembly>
+    <members>
+        <member name="T:SwaggerUI_Example.Controllers.UserController">
+            <summary>
+            Create Update User
+            </summary>
+        </member>
+        <member name="M:SwaggerUI_Example.Controllers.UserController.Create(DomainSrv.User.CreateUpdateUserDto)">
+            <summary>
+            To Create User
+            </summary>
+            <response code="201">On Successfull Creation Of user Returns Id</response>
+        </member>
+        <member name="M:SwaggerUI_Example.Controllers.UserController.Update(System.String,DomainSrv.User.CreateUpdateUserDto)">
+            <summary>
+            To Update User By Id
+            </summary>
+            <param name="Id">Record that need to Update</param>
+            <param name="InP">Name Must be Unique</param>
+            <response code="204">on Successfull Modification</response>
+            <response code="304">There is noo Modifications in the Data</response>
+            <response code="404">When the User Id is Not found</response>
+            <response code="400">Validations Errors</response>
+        </member>
+        <member name="M:SwaggerUI_Example.Controllers.UserController.GetRoleById(System.String)">
+            <summary>
+            To Get Individual User Details By Id
+            </summary>
+            <param name="Id">Generated Id while Creating User</param>
+            <response code="404">User Not found for Id</response>
+            <response code="200">If Rcord Identified for Id</response>
+        </member>
+        <member name="M:SwaggerUI_Example.Controllers.UserController.GetRoles">
+            <summary>
+            To Get the List of user 
+            </summary>
+        </member>
+    </members>
+</doc>
